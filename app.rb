@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader' if development?
+#require 'sinatra/reloader' if development?
 require_relative 'hangman'
 require_relative 'caesar_cipher'
 require_relative 'tictactoe'

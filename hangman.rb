@@ -1,6 +1,6 @@
 require "yaml"
 require "sinatra"
-require "sinatra/reloader" if development?
+#require "sinatra/reloader" if development?
 
 
 helpers do
