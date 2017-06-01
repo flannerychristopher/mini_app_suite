@@ -1,0 +1,31 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1474142159249-92e9941d2383?dpr=1&auto=format&fit=crop&w=1500&h=994&q=80&cs=tinysrgb&crop=&bg=");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h2 {
+  display: inline;
+}
+
+a, h2 {
+  vertical-align: bottom;
+  width: 75px;
+}
+
+.btn-lg {
+  width: 200px;
+}
+
+#start {
+  margin: 10px;
+}
+
+#box {
+  min-height: 600px;
+}

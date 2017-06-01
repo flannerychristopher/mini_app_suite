@@ -1,0 +1,26 @@
+form {
+  display: inline-block;
+}
+
+.btn {
+  border-radius: 0;
+  padding: 12px 22px;
+  margin: 12px 22px;
+  min-width: 200px;
+}
+
+.btn-grey {
+  background: #a0a0a0;
+}
+
+.btn-greyer {
+  background: #707070;
+}
+
+.btn:hover, .btn-grey:hover, .btn-greyer:hover {
+  background: #ffffff; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #565656, #ffffff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #565656, #ffffff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #565656, #ffffff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #565656, #ffffff); /* Standard syntax */
+}
