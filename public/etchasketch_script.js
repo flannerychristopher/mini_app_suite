@@ -14,9 +14,16 @@ $(document).ready(function(){
   var heading = document.createElement("h1");
   heading.innerHTML = "Etch-a-Sketch";
   heading.style.textAlign = "center";
-  heading.style.color = "#fff"
-  heading.style.padding = "50px";
+  heading.style.color = "#fff";
+  heading.style.textShadow = "2px 0px 10px #000000";
   $("body").append(heading);
+
+  var paragraph = document.createElement("p");
+  paragraph.innerHTML = "all CSS and HTML generated through JavaScript";
+  paragraph.style.textAlign = "center";
+  paragraph.style.color = "#fff";
+  paragraph.style.textShadow = "2px 0px 10px #000000";
+  $("body").append(paragraph);
 
   var resize = document.createElement("button");
   resize.innerHTML = "get started! choose sketch dimensions";

@@ -1,0 +1,13 @@
+<div class="content-box" style="background: <%= @number_background %>">
+
+  <div id="numbermessagediv">
+    <h1><%= @number_message %></h1>
+  </div>
+
+  <form action='/guess_a_number' method='post'>
+    <input type="text" name="number_guess" autofocus="true"/>
+    <input type="submit" value="Guess!" />
+  </form>
+
+<p>(hint: the number is <%= @number_to_guess %>)</p>
+<p>guesses left: <%= @guess_limit %></p>

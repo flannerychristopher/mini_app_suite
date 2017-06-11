@@ -3,6 +3,7 @@ require 'sinatra/reloader' if development?
 require_relative 'hangman'
 require_relative 'caesar_cipher'
 require_relative 'tictactoe'
+require_relative 'numberguess'
 
 get '/' do
   erb :index
@@ -155,3 +156,5 @@ post '/box9' do
   check_win
   erb :tictactoe_index
 end
+
+# number guess

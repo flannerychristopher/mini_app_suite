@@ -3,8 +3,6 @@ require "sinatra"
 
 enable :sessions
 
-
-
 helpers do
 
   def start_session

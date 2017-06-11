@@ -2,6 +2,7 @@
 
 #nav {
   text-align: center;
+  margin-top: 10px;
 }
 #nav form {
   display: inline;
@@ -46,7 +47,8 @@
   background-attachment: fixed;
   text-align: center;
   padding: 20px;
-  min-height: 600px;
+  min-height: 400px;
+  margin: 10%;
 }
 
 .icon {
@@ -65,6 +67,7 @@ a, a:visited {
 
 #hangman-body {
   background-image:url('/paperbackground.jpg');
+
   font-family: 'Gloria Hallelujah', Verdana, cursive;
   margin: 20px;
 }
@@ -100,7 +103,8 @@ a, a:visited {
 
 #pomodoro-body {
   background-image: url("https://images.unsplash.com/photo-1474142159249-92e9941d2383?dpr=1&auto=format&fit=crop&w=1500&h=994&q=80&cs=tinysrgb&crop=&bg=");
-  margin: 20px;
+  margin: 10px;
+  padding: 10px;
 }
 #pomodoro-body h2 {
   display: inline;
@@ -110,8 +114,11 @@ a, a:visited {
 /* tic tac toe */
 
 #tictactoe-body {
+  margin: 10px;
+  padding: 10px;
   background: lightgray;
   text-align: center;
+  font-family: 'Gloria Hallelujah', Verdana, cursive;
 }
 #tictactoe-body input {
   height: 100px;
@@ -146,4 +153,10 @@ a, a:visited {
   border-radius: 50%;
   margin: 10px;
   padding: 10px;
+}
+
+/* number guess */
+
+#numbermessagediv {
+  min-height: 200px;
 }
