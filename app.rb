@@ -1,5 +1,5 @@
 require 'sinatra'
-#require 'sinatra/reloader' if development?
+require 'sinatra/reloader' if development?
 require_relative 'hangman'
 require_relative 'caesar_cipher'
 require_relative 'tictactoe'
@@ -7,6 +7,8 @@ require_relative 'tictactoe'
 get '/' do
   erb :index
 end
+
+#hangman
 
 get "/hangman" do
   intro_session
@@ -28,7 +30,7 @@ post '/cheat' do
   erb :hangman_index
 end
 
-get '/word_input' do
+post '/word_input' do
   update_session
 
   if params["word_input"] == params["word_input"][/[a-zA-Z]{4,13}/]
@@ -43,7 +45,7 @@ get '/word_input' do
   erb :hangman_index
 end
 
-get '/choose_word' do
+post '/choose_word' do
   session[:intro] = true
   intro_session
   @message = "type a word to play with your friend (close your eyes, friend)"
@@ -57,27 +59,13 @@ post '/random_word' do
   erb :hangman_index
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#caesar_cipher
 
 get "/caesar_cipher" do
   erb :caesar_cipher_index
 end
 
-get '/caesar_new' do
+post '/caesar_cipher' do
   #@new_text = ""
   string = params['string']
   shift = params['shift'].to_i
@@ -88,6 +76,8 @@ get '/caesar_new' do
   erb :caesar_cipher_index
 end
 
+# javascript apps
+
 get "/pomodoro" do
   erb :pomodoro_index
 end
@@ -96,68 +86,70 @@ get "/etchasketch" do
   erb :etchasketch_index
 end
 
+#tictactoe
+
 get '/tictactoe' do
     start_session
   erb :tictactoe_index
 end
 
-get '/box1' do
+post '/box1' do
   update
   move
   check_win
   erb :tictactoe_index
 end
 
-get '/box2' do
+post '/box2' do
   update
   move
   check_win
   erb :tictactoe_index
 end
 
-get '/box3' do
+post '/box3' do
   update
   move
   check_win
   erb :tictactoe_index
 end
 
-get '/box4' do
+post '/box4' do
   update
   move
   check_win
   erb :tictactoe_index
 end
 
-get '/box5' do
+post '/box5' do
   update
   move
   check_win
   erb :tictactoe_index
 end
 
-get '/box6' do
+post '/box6' do
   update
   move
   check_win
   erb :tictactoe_index
 end
 
-get '/box7' do
+post '/box7' do
   update
   move
   check_win
   erb :tictactoe_index
 end
 
-get '/box8' do
+post '/box8' do
   update
   move
   check_win
   erb :tictactoe_index
 end
 
-get '/box9' do
+post '/box9' do
   update
   move
   check_win

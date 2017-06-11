@@ -57,7 +57,7 @@
 <!-- input word or select random word -->
     <% if @intro %>
       <div>
-        <form action='/word_input' method='get'>
+        <form action='/word_input' method='post'>
           <input type='text' name='word_input'>
           <br /><br />
           <input type='submit' value='submit this word' class='btn btn-primary'>
@@ -113,7 +113,7 @@
           <input type="submit" value="guess" class="btn btn-primary">
         </form>
         <br />
-        <form action='/choose_word' method="get">
+        <form action='/choose_word' method="post">
           <input type='submit' value='choose a new word' class='btn btn-primary'>
         </form>
 
