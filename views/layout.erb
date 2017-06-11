@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
--->
   <link rel="stylesheet" href="/style.css">
-
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
   <script type="text/javascript" src="/pomodoro_script.js"></script>
 </head>
-<div>
-  <p>navbar goes here</p>
-</div>
 
-<body>
-  <%= yield %>
-</body>
+  <header>
+    <nav id="nav">
 
+      <form action='/' method='get'>
+        <button class="btn">home</button>
+      </form>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <form action='/hangman' method='GET'>
+        <button class="btn">hangman</button>
+      </form>
 
+      <form action='/caesar_cipher' method='GET'>
+        <button class="btn btn-grey">caesar cipher</button>
+      </form>
+
+      <form action='/pomodoro' method='GET'>
+        <button class="btn btn-greyer">pomodoro clock</button>
+      </form>
+
+      <form action='/etchasketch' method='GET'>
+        <button class="btn">etch-a-sketch</button>
+      </form>
+
+      <form action='/tictactoe' method='GET'>
+        <button class="btn btn-grey">tic tac toe</button>
+      </form>
+
+      <form action='/' method='GET'>
+        <button class="btn btn-greyer">(coming soon)</button>
+      </form>
+
+    </nav>
+  </header>
+      <body>
+    <%= yield %>
+  </body>
 </html>
