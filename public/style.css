@@ -1,12 +1,11 @@
-form {
-  display: inline-block;
-}
+/* nav buttons */
 
 .btn {
-  border-radius: 0;
-  padding: 12px 22px;
-  margin: 12px 22px;
-  min-width: 200px;
+  background: #bfbfbf;
+  min-width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 10px;
 }
 
 .btn-grey {
@@ -23,4 +22,99 @@ form {
   background: -o-linear-gradient(bottom right, #565656, #ffffff); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, #565656, #ffffff); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #565656, #ffffff); /* Standard syntax */
+}
+
+/* common to multiple apps */
+
+.content-box {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  padding: 20px;
+  min-height: 600px;
+}
+
+/* hangman */
+
+#hangman-body {
+  background-image:url('/paperbackground.jpg');
+  font-family: 'Gloria Hallelujah', Verdana, cursive;
+  margin: 20px;
+}
+#messagediv, #hintdiv {
+  min-height: 80px;
+}
+#picdiv {
+  min-height: 310px;
+}
+#hangman-body form {
+  display: inline;
+}
+
+/* caesar cipher */
+
+#caesar-body {
+  margin: 10px;
+  padding: 10px;
+  font-family: "Times New Roman", serif;
+  background-image:url('/caesarbackground.jpg');
+}
+#caesar-text {
+  background:rgba(255,255,255,0.7);
+  margin: 20px;
+  padding: 10px 80px;
+}
+#ciphered-message {
+  min-height: 100px;
+}
+
+
+/* pomodoro */
+
+#pomodoro-body {
+  background-image: url("https://images.unsplash.com/photo-1474142159249-92e9941d2383?dpr=1&auto=format&fit=crop&w=1500&h=994&q=80&cs=tinysrgb&crop=&bg=");
+  margin: 20px;
+}
+#pomodoro-body h2 {
+  display: inline;
+  vertical-align: middle;
+}
+
+/* tic tac toe */
+
+#tictactoe-body {
+  background: lightgray;
+  text-align: center;
+}
+#tictactoe-body input {
+  height: 100px;
+  width: 100px;
+  background-color: Transparent;
+  outline: none;
+  margin-bottom: 8px;
+  vertical-align: top;
+  border: 0px;
+}
+#tictactoe-body form {
+  display: inline;
+}
+#tictactoegrid {
+  background-image: url('/tictactoegrid.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 320px;
+  display: block;
+  margin: 0 auto;
+}
+#playagain {
+  height: 100px;
+  width: 100px;
+  background-color: Transparent;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 10px;
 }

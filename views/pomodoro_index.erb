@@ -1,46 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Pomodoro Clock</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="pomodoro_style.css">
-</head>
+<div id="pomodoro-body">
 
-<body>
+  <div class="content-box">
 
-<div id="box">
+    <h1><strong>Pomodoro Clock</strong></h1>
+    <h3 id="timeType"></h3>
 
-  <h1><strong>Pomodoro Clock</strong></h1>
-  <h3 id="timeType"></h3>
+      <div id="timeDiv">
+        <h1 id="title1">Session Time</h1>
+        <button href="#" class="btn" id="minus5Clock">-</button>
 
-    <div id="timeDiv">
-      <h1 id="title1">Session Time</h1>
-      <a href="#" class="btn btn-primary" id="minus5Clock">-</a>
+        <h2 id="num">25</h2>
+        <button href="#" class="btn" id="add5Clock">+</button>
 
-      <h2 id="num">25</h2>
-      <a href="#" class="btn btn-primary" id="add5Clock">+</a>
+      </div>
 
+      <div id="breakDiv">
+        <h1 id="title1">Break Time</h1>
+        <button href="#" class="btn btn-primary" id="minus5Break">-</button>
+        <h2 id="breakNum">5</h2>
+        <button href="#" class="btn" id="add5Break">+</button>
+      </div>
+
+    <div>
+      <button href="#" class="btn" id="start">start</button>
+      <br />
+      <button href="#" class="btn" id="reset">reset</button>
     </div>
 
-    <div id="breakDiv">
-      <h1 id="title1">Break Time</h1>
-      <a href="#" class="btn btn-primary" id="minus5Break">-</a>
-      <h2 id="breakNum">5</h2>
-      <a href="#" class="btn btn-primary" id="add5Break">+</a>
-    </div>
-
-  <div>
-    <a href="#" class="btn btn-lg btn-primary" id="start">start</a>
-    <br />
-    <a href="#" class="btn btn-lg btn-primary" id="reset">reset</a>
   </div>
 
 </div>
-
-<%= erb :backpartial %>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="/pomodoro_script.js"></script>
-
-</body>
-</html>
