@@ -48,9 +48,13 @@ helpers do
       @number_message = "a little too high."
     elsif dif.between?(-5,-1)
       @number_message = "a little too low."
-    elsif dif >= 6
+    elsif dif.between?(6,15)
+      @number_message = "too high, but getting close"
+    elsif dif.between?(-15,-6)
+      @number_message = "too low, but getting close"
+    elsif dif >= 16
       @number_message = "way too high!"
-    elsif dif <= -6
+    elsif dif <= -16
       @number_message = "way too low!"
     else
       @number_message = "Correct! The secret number is #{@number_to_guess}. Guess the new number:"
@@ -60,8 +64,9 @@ helpers do
 
   def change_color(dif)
     case dif
-    when 1..5, -5..-1 then 'rgba(50, 50, 255, 0.3)'
-    when 6..1000, -1000..-6 then 'rgba(255, 50, 50, 0.3)'
+    when 1..5, -5..-1 then 'rgba(0, 0, 255, 0.3)'
+    when 6..15, -15..-6 then 'rgba(250, 255, 10, 0.3)'
+    when 16..1000, -1000..-16 then 'rgba(255, 50, 50, 0.3)'
     else '#33cc33'
   	end
   end

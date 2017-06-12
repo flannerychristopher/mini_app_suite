@@ -1,6 +1,7 @@
-<div class="content-box" style="background: <%= @number_background %>">
 
-  <div id="numbermessagediv">
+<div id="numberguess-body" class="content-box" style="background: <%= @number_background %>">
+
+  <div id="numbermessage-div">
     <h1><%= @number_message %></h1>
   </div>
 
@@ -9,5 +10,7 @@
     <input type="submit" value="Guess!" />
   </form>
 
-<p>(hint: the number is <%= @number_to_guess %>)</p>
-<p>guesses left: <%= @guess_limit %></p>
+  <h2>guesses left: <%= @guess_limit %></h2>
+    <p>(hint: the number is <%= @number_to_guess %>)</p>
+
+</div>

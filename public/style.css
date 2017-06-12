@@ -48,7 +48,9 @@
   text-align: center;
   padding: 20px;
   min-height: 400px;
-  margin: 10%;
+  margin: 0 10%;
+  border: none;
+  border-radius: 10px;
 }
 
 .icon {
@@ -67,9 +69,7 @@ a, a:visited {
 
 #hangman-body {
   background-image:url('/paperbackground.jpg');
-
   font-family: 'Gloria Hallelujah', Verdana, cursive;
-  margin: 20px;
 }
 #messagediv, #hintdiv {
   min-height: 80px;
@@ -84,15 +84,15 @@ a, a:visited {
 /* caesar cipher */
 
 #caesar-body {
-  margin: 10px;
-  padding: 10px;
   font-family: "Times New Roman", serif;
   background-image:url('/caesarbackground.jpg');
 }
 #caesar-text {
   background:rgba(255,255,255,0.7);
-  margin: 20px;
-  padding: 10px 80px;
+  margin: 0px 5%;
+  padding: 10px 15%;
+  border: none;
+  border-radius: 10px;
 }
 #ciphered-message {
   min-height: 100px;
@@ -103,8 +103,6 @@ a, a:visited {
 
 #pomodoro-body {
   background-image: url("https://images.unsplash.com/photo-1474142159249-92e9941d2383?dpr=1&auto=format&fit=crop&w=1500&h=994&q=80&cs=tinysrgb&crop=&bg=");
-  margin: 10px;
-  padding: 10px;
 }
 #pomodoro-body h2 {
   display: inline;
@@ -114,10 +112,7 @@ a, a:visited {
 /* tic tac toe */
 
 #tictactoe-body {
-  margin: 10px;
-  padding: 10px;
   background: lightgray;
-  text-align: center;
   font-family: 'Gloria Hallelujah', Verdana, cursive;
 }
 #tictactoe-body input {
@@ -156,7 +151,10 @@ a, a:visited {
 }
 
 /* number guess */
-
-#numbermessagediv {
+#numberguess-body {
+  background: lightgray;
+  font-family: 'Gloria Hallelujah', Verdana, cursive;
+}
+#numbermessage-div {
   min-height: 200px;
 }
