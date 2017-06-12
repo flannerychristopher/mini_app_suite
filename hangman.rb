@@ -1,7 +1,6 @@
 require "yaml"
-require "sinatra"
+#require "sinatra"
 #require "sinatra/reloader" if development?
-
 
 helpers do
 #set variables and message to choose a word

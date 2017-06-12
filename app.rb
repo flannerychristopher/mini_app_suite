@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader' if development?
+#require 'sinatra/reloader' if development?
 require_relative 'hangman'
 require_relative 'caesar_cipher'
 require_relative 'tictactoe'
@@ -61,7 +61,6 @@ post '/random_word' do
 end
 
 #caesar_cipher
-
 get "/caesar_cipher" do
   erb :caesar_cipher_index
 end
@@ -76,6 +75,7 @@ post '/caesar_cipher' do
   end
   erb :caesar_cipher_index
 end
+
 
 # javascript apps
 

@@ -1,15 +1,8 @@
-require 'sinatra'
-#require 'sinatra/reloader' if development?
-
-enable :sessions
-
 def caesar_cypher(string, shift)
   # declare arrays and string for steps through ciphering
   ascii_arr = []
   shifted_num = []
   @new_text = ""
-  #session[:new_text] = @new_text
-
   letters_arr = string.scan(/./)
 
   letters_arr.each do |letter|
