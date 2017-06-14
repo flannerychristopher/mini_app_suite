@@ -46,7 +46,7 @@ post '/word_input' do
   erb :hangman_index
 end
 
-post '/choose_word' do
+get '/choose_word' do
   session[:intro] = true
   intro_session
   @message = "type a word to play with your friend (close your eyes, friend)"

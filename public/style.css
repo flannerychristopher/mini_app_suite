@@ -76,11 +76,26 @@ a, a:visited {
 #messagediv, #hintdiv {
   min-height: 80px;
 }
+#hintdiv {
+  display: inline-block;
+  min-width: 40%;
+  vertical-align: middle;
+  text-align: center;
+}
 #picdiv {
   min-height: 310px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: 40%;
 }
 #hangman-body form {
   display: inline;
+}
+.scaffold {
+  position: absolute;
+  left: 25%;
+
 }
 
 /* caesar cipher */
