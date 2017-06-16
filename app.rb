@@ -90,7 +90,7 @@ end
 #tictactoe
 
 get '/tictactoe' do
-    start_session
+  start_session
   erb :tictactoe_index
 end
 

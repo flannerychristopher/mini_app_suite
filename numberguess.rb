@@ -14,26 +14,31 @@ end
 helpers do
 
   def start_game
-
-    @number_to_guess = rand(100) + 1
-    session[:number_to_guess] = @number_to_guess
-    @guess_limit = 5
-    session[:guess_limit] = @guess_limit
-
-    @number_background = "#e0e0e0"
+    session[:number_to_guess] = @number_to_guess = rand(100) + 1
+    session[:guess_limit] = @guess_limit = 5
+    session[:number_background] = @number_background = "#e0e0e0"
     @number_message ||= "Try to guess the secret number between 1 and 100!"
   end
 
   def update_guess
-    @number_to_guess = session[:number_to_guess]
-    session[:guess_limit] -= 1
-    @guess_limit = session[:guess_limit]
-    guess = params['number_guess']
-    dif = guess.to_i - @number_to_guess
+    if !params['number_guess'].to_i.between?(1,100)
+      @number_message = "please choose a number between 1 and 100"
+      @number_background = session[:number_background]
+      update_session
+    else
+      session[:guess_limit] -= 1
+      update_session
+      dif = (params['number_guess']).to_i - @number_to_guess
+      @number_message = check_number_guess(dif)
+      @number_background = change_color(dif)
+      check_guess_limit
+    end
+  end
 
-    @number_message = check_number_guess(dif)
-    @number_background = change_color(dif)
-    check_guess_limit
+  def update_session
+    @number_to_guess = session[:number_to_guess]
+    @guess_limit = session[:guess_limit]
+    session[:number_background] = @number_background
   end
 
   def check_guess_limit
