@@ -3,6 +3,76 @@ require "sinatra"
 
 enable :sessions
 
+get '/tictactoe' do
+  start_session
+  erb :tictactoe_index
+end
+
+post '/box1' do
+  update
+  move
+  check_win
+  erb :tictactoe_index
+end
+
+post '/box2' do
+  update
+  move
+  check_win
+  erb :tictactoe_index
+end
+
+post '/box3' do
+  update
+  move
+  check_win
+  erb :tictactoe_index
+end
+
+post '/box4' do
+  update
+  move
+  check_win
+  erb :tictactoe_index
+end
+
+post '/box5' do
+  update
+  move
+  check_win
+  erb :tictactoe_index
+end
+
+post '/box6' do
+  update
+  move
+  check_win
+  erb :tictactoe_index
+end
+
+post '/box7' do
+  update
+  move
+  check_win
+  erb :tictactoe_index
+end
+
+post '/box8' do
+  update
+  move
+  check_win
+  erb :tictactoe_index
+end
+
+post '/box9' do
+  update
+  move
+  check_win
+  erb :tictactoe_index
+end
+
+
+
 helpers do
 
   def start_session
