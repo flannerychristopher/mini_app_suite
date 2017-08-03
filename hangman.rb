@@ -1,5 +1,4 @@
 require 'yaml'
-enable :sessions
 
 get "/hangman" do
   intro_session
@@ -156,6 +155,7 @@ helpers do
       end
     end
   end
+
 #check if too many wrong guesses
   def game_over?
     if session[:wrong_guesses] > 5

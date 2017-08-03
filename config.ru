@@ -2,5 +2,5 @@ require "./app"
 require "./caesar_cipher"
 require "./hangman"
 require "./tictactoe"
-require "./webguesser"
+require "./numberguess"
 run Sinatra::Application

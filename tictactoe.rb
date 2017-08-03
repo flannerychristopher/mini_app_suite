@@ -1,8 +1,3 @@
-require "sinatra"
-#require "sinatra/reloader" if development?
-
-enable :sessions
-
 get '/tictactoe' do
   start_session
   erb :tictactoe_index
@@ -71,8 +66,6 @@ post '/box9' do
   erb :tictactoe_index
 end
 
-
-
 helpers do
 
   def start_session
@@ -103,7 +96,6 @@ helpers do
     @message = "player 1's turn"
   end
 
-
   def update
     @turn = session[:turn]
     @message = session[:message]
@@ -118,7 +110,6 @@ helpers do
     @s8 = session[:s8]
     @s9 = session[:s9]
   end
-
 
   def move
     #player 2 has even turns
