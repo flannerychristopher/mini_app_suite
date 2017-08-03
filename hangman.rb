@@ -1,8 +1,57 @@
-require "yaml"
-#require "sinatra"
-#require "sinatra/reloader" if development?
+require 'yaml'
+enable :sessions
+
+get "/hangman" do
+  intro_session
+  erb :hangman_index
+end
+
+get '/choose_word' do
+  session[:intro] = true
+  intro_session
+  @message = "type a word to play with your friend"
+  erb :hangman_index
+end
+
+post '/random_word' do
+  get_word_random
+  new_game
+  update_session
+  erb :hangman_index
+end
+
+post "/hangman_guess" do
+  check_guess
+  game_over?
+  update_session
+  erb :hangman_index
+end
+
+post '/cheat' do
+  @message = ["cheater!", "we're not all strong people.", "it's okay to feel bad about yourself", "all is fair in love and hangman", "oook what's the point of playing now?"].sample
+  @cheat = true
+  session[:cheat] = @cheat
+  update_session
+  erb :hangman_index
+end
+
+post '/word_input' do
+  update_session
+
+  if params["word_input"] == params["word_input"][/[a-zA-Z]{4,13}/]
+    get_word_input
+    new_game
+    update_session
+  else
+    @message = "please choose a word 4 to 12 letters long and no numbers, punctuation, or symbols."
+    @intro = true
+  end
+
+  erb :hangman_index
+end
 
 helpers do
+
 #set variables and message to choose a word
   def intro_session
     @hint = "_"
@@ -10,8 +59,9 @@ helpers do
     @wrong_guesses = 0
     session[:intro] = true
     @intro = session[:intro]
-    @message = "type a word to play with your friend (close your eyes, friend)"
+    @message = "type a word to play with your friend"
   end
+
 #update variables and message when there is a new game, guess, or cheat
   def update_session
     @guessed = session[:guessed]
@@ -40,11 +90,13 @@ helpers do
     end
 
   end
+
 #get the word from user input
   def get_word_input
     @word = (params["word_input"]).upcase
     session[:word] = @word
   end
+
 #get the word from the text file
   def get_word_random
     word = ""
@@ -53,6 +105,7 @@ helpers do
     end
     @word = word
   end
+
 #start a game with variables, messages,
   def new_game
     session[:intro] = false

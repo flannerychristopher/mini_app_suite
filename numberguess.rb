@@ -1,6 +1,3 @@
-require 'sinatra'
-require 'sinatra/reloader' if development?
-
 get '/numberguess' do
   start_game
   erb :numberguess_index

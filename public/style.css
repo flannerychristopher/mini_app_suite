@@ -5,9 +5,13 @@
   margin: 10px;
   background: #bfbfbf;
   border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 #nav form {
   display: inline;
+  min-width: 24%;
 }
 
 /* common to multiple apps */
