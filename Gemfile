@@ -1,5 +1,4 @@
 source "https://rubygems.org"
 
-gem "sinatra"
-gem "rake"
-gem "shotgun"
+gem 'sinatra', require: 'sinatra/base'
+gem 'shotgun'
