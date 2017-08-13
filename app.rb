@@ -1,4 +1,4 @@
-# class AppSuite < Sinatra::Base
+class AppSuite < Sinatra::Base
 
   enable :sessions
 
