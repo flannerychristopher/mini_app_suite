@@ -74,42 +74,11 @@ a, a:visited {
 }
 
 
-/* hangman */
-
-#hangman-body {
-  background-image:url('/paperbackground.jpg');
-  font-family: 'Gloria Hallelujah', Verdana, cursive;
-}
-#messagediv, #hintdiv {
-  min-height: 80px;
-}
-#hintdiv {
-  display: inline-block;
-  min-width: 40%;
-  vertical-align: middle;
-  text-align: center;
-}
-#picdiv {
-  min-height: 310px;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  width: 40%;
-}
-#hangman-body form {
-  display: inline;
-}
-.scaffold {
-  position: absolute;
-  left: 25%;
-
-}
-
 /* caesar cipher */
 
 #caesar-body {
   font-family: "Times New Roman", serif;
-  background-image:url('/caesarbackground.jpg');
+  background-image:url('/img/caesarbackground.jpg');
 }
 #caesar-text {
   background:rgba(255,255,255,0.7);
@@ -152,7 +121,7 @@ a, a:visited {
   display: inline;
 }
 #tictactoegrid {
-  background-image: url('/tictactoegrid.png');
+  background-image: url('/img/tictactoegrid.png');
   background-position: center;
   background-repeat: no-repeat;
   width: 320px;

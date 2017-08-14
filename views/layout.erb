@@ -7,11 +7,9 @@
   <meta name="description" content="mini app suite">
   <meta name="author" content="mini app suite">
 
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="/pomodoro_script.js"></script>
-
 </head>
 
   <header>
@@ -19,10 +17,6 @@
 
       <form action='/' method='get'>
         <button class="btn btn-nav">home</button>
-      </form>
-
-      <form action='/hangman' method='GET'>
-        <button class="btn btn-nav">hangman</button>
       </form>
 
       <form action='/caesar_cipher' method='GET'>
@@ -51,7 +45,9 @@
 
     </nav>
   </header>
-      <body>
+
+  <body>
     <%= yield %>
   </body>
+
 </html>

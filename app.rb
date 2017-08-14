@@ -1,5 +1,5 @@
 class AppSuite < Sinatra::Base
-
+  set :session_secret, "328479283uf923fu8932fu923uf9832f23f232"
   enable :sessions
 
   get '/' do
@@ -22,57 +22,7 @@ class AppSuite < Sinatra::Base
     erb :caesar_cipher_index
   end
 
-#hangman
-  get "/hangman" do
-    intro_session
-    erb :hangman_index
-  end
-
-  get '/choose_word' do
-    # session[:intro] = true
-    intro_session
-    @message = "type a word to play with your friend"
-    erb :hangman_index
-  end
-
-  post '/random_word' do
-    get_word_random
-    new_game
-    update_session
-    erb :hangman_index
-  end
-
-  post "/hangman_guess" do
-    check_guess
-    game_over?
-    update_session
-    erb :hangman_index
-  end
-
-  post '/cheat' do
-    @message = ["cheater!", "we're not all strong people.", "it's okay to feel bad about yourself", "all is fair in love and hangman", "oook what's the point of playing now?"].sample
-    @cheat = true
-    session[:cheat] = @cheat
-    update_session
-    erb :hangman_index
-  end
-
-  post '/word_input' do
-    update_session
-
-    if params["word_input"] == params["word_input"][/[a-zA-Z]{4,13}/]
-      get_word_input
-      new_game
-      update_session
-    else
-      @message = "please choose a word 4 to 12 letters long and no numbers, punctuation, or symbols."
-      @intro = true
-    end
-
-    erb :hangman_index
-  end
-
-  #numberguess
+#numberguess
   get '/numberguess' do
     start_game
     erb :numberguess_index
@@ -83,7 +33,7 @@ class AppSuite < Sinatra::Base
     erb :numberguess_index
   end
 
-  #tictactoe
+#tictactoe
   get '/tictactoe' do
     start_session
     erb :tictactoe_index
@@ -152,7 +102,7 @@ class AppSuite < Sinatra::Base
     erb :tictactoe_index
   end
 
-  # javascript apps
+# javascript apps
 
   get "/pomodoro" do
     erb :pomodoro_index

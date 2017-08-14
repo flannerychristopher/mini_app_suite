@@ -1,8 +1,9 @@
 require 'bundler'
 Bundler.require
-require "./app"
-require "./caesar_cipher"
-require "./hangman"
-require "./tictactoe"
-require "./numberguess"
+
+require './app'
+require './caesar_cipher'
+require './numberguess'
+require './tictactoe'
+
 run AppSuite

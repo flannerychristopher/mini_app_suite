@@ -3,8 +3,6 @@ $(document).ready(function(){
   var count = parseInt($("#num").html());
   var breakTime = parseInt($("#breakNum").html());
 
-
-
   $("#start").click(function(){
   	var counter = setInterval(timer, 1000);
     count *= 60;

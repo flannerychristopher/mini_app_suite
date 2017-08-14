@@ -3,7 +3,7 @@ $(document).ready(function(){
 // ---- make HTML and CSS
 
   $("body").css({
-    "background": "url('sketch.jpg') no-repeat center center fixed",
+    "background": "url('img/sketch.jpg') no-repeat center center fixed",
     "background-size": "cover",
     "margin": "0",
     "padding": "0",
