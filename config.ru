@@ -1,5 +1,5 @@
-require 'bundler'
-Bundler.require
+#require 'bundler'
+#Bundler.require
 
 require './app'
 require './caesar_cipher'
